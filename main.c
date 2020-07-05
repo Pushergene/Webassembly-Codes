@@ -5,15 +5,21 @@
 
 WASM_EXPORT
 int main(void) {
+    long double x;
+    long double a;
+    x = 2;
+    a = 194712371834723;
+    long double y = a + x * (a - x);
+    printf("%g", y);
  int ebayteppich = 923823;
   printf("Teppich: %d \n", ebayteppich);
   if (ebayteppich < -1) {
-      printf("Alter, was geht da ab?!");
+      return "Alter, was geht da ab?!";
   }
   else {
-      printf("Okay, geht klar!");
+      return "Okay, geht klar!";
   }
-    char Frage[] = "Was für eine Version hat dein Firefox?\n";
+    char Frage[] = "Was fuer eine Version hat dein Firefox?\n";
     int Firefox  = 50;
     //Firefox = getchar( );
     if(Firefox == 78) {
@@ -26,9 +32,10 @@ int main(void) {
         printf("Dein Firefox hat LTS, LongTimeSupport\n");
 }
     else {
-        printf("Bitte überleg dir, ob du unsicher surfen willst.\n");
+        printf("Bitte ueberleg dir, ob du unsicher surfen willst.\n");
     }
 }
+
 /* External function that is implemented in JavaScript. */
 extern void putc_js(char c);
 
