@@ -4,9 +4,8 @@
 #define WASM_EXPORT __attribute__((visibility("default")))
 
 WASM_EXPORT
-void teppich()
-{
-  int ebayteppich = 923823;
+int main(void) {
+ int ebayteppich = 923823;
   printf("Teppich: %d \n", ebayteppich);
   if (ebayteppich < -1) {
       printf("Alter, was geht da ab?!");
@@ -14,12 +13,9 @@ void teppich()
   else {
       printf("Okay, geht klar!");
   }
-}
-
-void firefox() {
     char Frage[] = "Was für eine Version hat dein Firefox?\n";
-    int Firefox;
-    Firefox = getchar( );
+    int Firefox  = 50;
+    //Firefox = getchar( );
     if(Firefox == 78) {
         printf("Dein Firefox ist sicher.\n", Frage);
     }
@@ -33,12 +29,6 @@ void firefox() {
         printf("Bitte überleg dir, ob du unsicher surfen willst.\n");
     }
 }
-
-int main() {
-    teppich();
-    firefox();
-}
-
 /* External function that is implemented in JavaScript. */
 extern void putc_js(char c);
 
