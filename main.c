@@ -7,11 +7,13 @@ WASM_EXPORT
 int main(void) {
     long double x;
     long double a;
-    x = 2;
-    a = 194712371834723;
+    scanf("%d", &x);
+    scanf("%d", &a);
     long double y = a + x * (a - x);
-    printf("%g", y);
- int ebayteppich = 923823;
+    printf("%g \n", y);
+printf("Wie viel bietest du fuer dein Teppich? \n");
+ int ebayteppich;
+ scanf("%d", &ebayteppich);
   printf("Teppich: %d \n", ebayteppich);
   if (ebayteppich < -1) {
       return "Alter, was geht da ab?!";
@@ -20,7 +22,8 @@ int main(void) {
       return "Okay, geht klar!";
   }
     char Frage[] = "Was fuer eine Version hat dein Firefox?\n";
-    int Firefox  = 50;
+    int Firefox;
+    scanf("%d", &Firefox)
     //Firefox = getchar( );
     if(Firefox == 78) {
         printf("Dein Firefox ist sicher.\n", Frage);
